@@ -19,6 +19,12 @@ namespace ConsoleApp2
             IWebDriver Driver = new FirefoxDriver(@"F:\Selenium needs");
             
             Driver.Url = "http://www.google.com";
+
+            //open gmail 
+            //Driver.FindElement(By.XPath("//a[contains(text(),'Gmail')]")).Click();
+            
+            //Select Element from array list
+            /*
             Driver.FindElement(By.Name("q")).SendKeys("ID");
             Driver.FindElement(By.ClassName("gLFyf")).SendKeys("ClassName");
             Driver.FindElement(By.Name("q")).SendKeys(Keys.Enter);
@@ -26,7 +32,14 @@ namespace ConsoleApp2
             Wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("LC20lb")));
 
             Driver.FindElements(By.ClassName("LC20lb"))[0].Click();
+            */
+            //Search for image on google
+            Driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(5));
+            Driver.FindElement(By.XPath("//a[contains(text(),'صور')]")).Click();   //click on image button
+            Driver.FindElement(By.XPath("//span[@class='BwoPOe']")).Click();     //click on camera icon
+            Driver.FindElement(By.Id("awyMjb")).SendKeys("F:\\image\\index.jpg");   // send image path
 
+            
 
 
 
