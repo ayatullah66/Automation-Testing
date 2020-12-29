@@ -23,23 +23,34 @@ namespace ConsoleApp3
             Driver.Url = "http://www.google.com";
         }
 
-        [Test]
+        [Test,Order(3)]
         public void Search_for_numbers()
         {
             Driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(5*1000));
             Driver.FindElement(By.XPath("//input[@type='text']")).SendKeys("1000000");
             Driver.FindElement(By.XPath("//input[@type='text']")).SendKeys(Keys.Enter);
-            //Assert.Greater(Driver.FindElements(By.ClassName("LC20lb")).Count,16);
-            Assert.IsTrue(Driver.FindElements(By.ClassName("LC20lb")).Count.Equals(0));
         }
 
-        [Test]
+        [Test,Order(1)]
         public void Search_for_letters()
         {
-
-            Driver.FindElement(By.XPath("//input[@type='text']")).SendKeys("aya hassan");
+            Driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(60 * 1000));
+            Driver.FindElement(By.XPath("//input[@type='text']")).SendKeys("Zafer Al Abdeen");
+            Driver.FindElement(By.XPath("//input[@type='text']")).SendKeys(Keys.Enter);
+            Assert.Greater(Driver.FindElements(By.XPath("//span")).Count, 13);
+            Assert.IsTrue(Driver.FindElements(By.XPath("//span")).Count.Equals(14));
         }
-        
+
+        [Test,Order(2)]
+        public void Search_for_image()
+        {
+            Driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(60 * 1000));
+            Driver.FindElement(By.XPath("//a[contains(text(),'صور')]")).Click();   
+            Driver.FindElement(By.XPath("//span[@class='BwoPOe']")).Click();     
+            Driver.FindElement(By.Id("awyMjb")).SendKeys("F:\\image\\index.jpg");
+        }
+
+
         [TearDown]
         public void Close()
         {
