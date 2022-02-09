@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-09T20:56:41 EET" name="Default suite" finished-at="2022-02-09T20:57:07 EET" duration-ms="25648">
+    <groups>
+    </groups>
+    <test started-at="2022-02-09T20:56:41 EET" name="Default test" finished-at="2022-02-09T20:57:07 EET" duration-ms="25648">
+      <class name="amazon.com.Project.selectProduct">
+        <test-method is-config="true" signature="openurl()[pri:0, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:56:41 EET" name="openurl" finished-at="2022-02-09T20:56:47 EET" duration-ms="6010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openurl -->
+        <test-method signature="searchforelement()[pri:0, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:56:47 EET" name="searchforelement" finished-at="2022-02-09T20:56:52 EET" duration-ms="5008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchforelement -->
+        <test-method signature="selectElement()[pri:1, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:56:52 EET" name="selectElement" finished-at="2022-02-09T20:56:58 EET" duration-ms="5511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectElement -->
+        <test-method signature="addtocart()[pri:2, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:56:58 EET" name="addtocart" finished-at="2022-02-09T20:56:58 EET" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addtocart -->
+        <test-method signature="opencart()[pri:3, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:56:58 EET" name="opencart" finished-at="2022-02-09T20:57:05 EET" duration-ms="7070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opencart -->
+        <test-method signature="deleteitem()[pri:4, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:57:05 EET" name="deleteitem" finished-at="2022-02-09T20:57:06 EET" duration-ms="1342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteitem -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:amazon.com.Project.selectProduct@6a370f4]" started-at="2022-02-09T20:57:06 EET" name="closebrowser" finished-at="2022-02-09T20:57:07 EET" duration-ms="322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closebrowser -->
+      </class> <!-- amazon.com.Project.selectProduct -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
